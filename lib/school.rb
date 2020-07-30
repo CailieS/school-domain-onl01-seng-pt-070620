@@ -9,8 +9,15 @@ class School
     @roster[grade] ? @roster[grade].<<(name) : (@roster[grade] = [];@roster[grade] << name)
   end
     
-  def grade
-    @roster[grade_number]
+  def grade(level)
+    roster.detect do |x, y|
+      if x == level
   end
-  
+  def grade(level)
+    roster.detect do |x, y| 
+      if x == level
+        return y 
+      end 
+    end 
+  end 
 end
